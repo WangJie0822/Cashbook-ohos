@@ -1,0 +1,11 @@
+{
+  "app": {
+    "bundleName": "cn.wj.ohos.cashbook",
+    "bundleType": "app",
+    "vendor": "WangJie0822",
+    "versionCode": 1000000,
+    "versionName": "1.0.0",
+    "icon": "$media:layered_image",
+    "label": "$string:app_name"
+  }
+}
