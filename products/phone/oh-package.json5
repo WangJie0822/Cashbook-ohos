@@ -1,5 +1,5 @@
 {
-  "name": "entry",
+  "name": "phone",
   "version": "1.0.0",
   "description": "Please describe the basic information.",
   "main": "",
@@ -8,4 +8,3 @@
   "dependencies": {
   }
 }
-
