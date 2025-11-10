@@ -37,6 +37,30 @@
           ]
         }
       ]
+    },
+    {
+      "name": "common",
+      "srcPath": "./core/common",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "logger",
+      "srcPath": "./core/logger",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
     }
   ]
 }
