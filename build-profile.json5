@@ -61,6 +61,18 @@
           ]
         }
       ]
+    },
+    {
+      "name": "design",
+      "srcPath": "./core/design",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
     }
   ]
 }

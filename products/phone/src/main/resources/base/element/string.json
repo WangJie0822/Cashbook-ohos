@@ -11,6 +11,10 @@
     {
       "name": "EntryAbility_label",
       "value": "记账本"
+    },
+    {
+      "name": "back_toast",
+      "value": "再滑一次退出"
     }
   ]
 }

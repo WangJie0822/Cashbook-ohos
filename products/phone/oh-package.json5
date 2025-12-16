@@ -6,6 +6,8 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "logger": "file:../../core/logger"
+    "logger": "file:../../core/logger",
+    "common": "file:../../core/common",
+    "design": "file:../../core/design",
   }
 }

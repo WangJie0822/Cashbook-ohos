@@ -1,6 +1,7 @@
 {
   "crossplatform": true,
   "modules": [
-    "phone"
+    "phone",
+    "design"
   ]
 }

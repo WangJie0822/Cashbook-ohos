@@ -1,5 +1,5 @@
 {
-  "name": "common",
+  "name": "design",
   "version": "1.0.0",
   "description": "Please describe the basic information.",
   "main": "Index.ets",
@@ -7,6 +7,6 @@
   "license": "Apache-2.0",
   "packageType": "InterfaceHar",
   "dependencies": {
-    "logger": "file:../logger"
+    "logger": "file:../../core/logger"
   }
 }
