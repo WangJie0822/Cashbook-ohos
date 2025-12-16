@@ -2,11 +2,15 @@ import type { common, StartOptions, Want } from '@kit.AbilityKit';
 import type { BusinessError } from '@kit.BasicServicesKit';
 import device from '@ohos.deviceInfo';
 import { Logger } from 'logger';
+import { appManager } from '../../../../Index';
 
 const TAG = 'ProcessUtil';
 
 export class ProcessUtil {
-  public static terminateAbility(context: common.UIAbilityContext): void {
+  public static terminateAbility(context?: common.UIAbilityContext): void {
+    if (!context) {
+      context = appManager.getContext() as common.UIAbilityContext
+    }
     try {
       context.terminateSelf().then(() => {
         Logger.i(TAG, 'terminateSelf succeed');

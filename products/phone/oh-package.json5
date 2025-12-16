@@ -9,5 +9,6 @@
     "logger": "file:../../core/logger",
     "common": "file:../../core/common",
     "design": "file:../../core/design",
+    "data": "file:../../core/data",
   }
 }

@@ -1,3 +1,4 @@
+import { settingsRepository } from 'data'
 import { PageContext, StorageKey, UIConstants } from 'design'
 import { SplashEvent, SplashViewModel } from '../viewmodel/SplashViewModel'
 
@@ -5,7 +6,7 @@ import { SplashEvent, SplashViewModel } from '../viewmodel/SplashViewModel'
 @Component
 struct SplashPage {
   private pageContext: PageContext = AppStorage.get(StorageKey.MAIN_PAGE_CONTEXT) as PageContext
-  private viewModel: SplashViewModel = new SplashViewModel()
+  private viewModel: SplashViewModel = new SplashViewModel(this.pageContext, settingsRepository)
 
   aboutToAppear(): void {
     this.getUIContext().animateTo({

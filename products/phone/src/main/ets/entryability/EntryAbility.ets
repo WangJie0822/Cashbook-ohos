@@ -2,6 +2,7 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 import { PageContext, StorageKey } from 'design';
 import { Logger, OhosLogAdapter } from 'logger';
+import { appManager } from 'common';
 
 const TAG = 'EntryAbility'
 
@@ -10,6 +11,7 @@ export default class EntryAbility extends UIAbility {
     Logger.addAdapter(new OhosLogAdapter('Cashbook'))
     Logger.i(TAG, `Ability onCreate launchReason: ${launchParam.launchReason}`)
     this.checkAndHandleParams(want);
+    appManager.setContext(this.context)
   }
 
   onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void {
@@ -36,7 +38,7 @@ export default class EntryAbility extends UIAbility {
     // Main window is created, set main page for this ability
     Logger.i(TAG, 'Ability onWindowStageCreate');
 
-    AppStorage.setOrCreate(StorageKey.MAIN_PAGE_CONTEXT, new PageContext())
+    AppStorage.setOrCreate(StorageKey.MAIN_PAGE_CONTEXT, new PageContext());
 
     windowStage.loadContent('pages/SplashPage', (err) => {
       try {

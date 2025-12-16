@@ -1,12 +1,26 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/wj/.ohos/config/default_Cashbook-ohos_VEVwBObAZDzyyRZGr_Z2ErKUaow5mU7jTpEXVhxaL_M=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BA1597DC3907679796582EF949C94C733D91C6E15EE3DDE2AABADDFC7ED97D5C8B52244828A060B",
+          "profile": "/Users/wj/.ohos/config/default_Cashbook-ohos_VEVwBObAZDzyyRZGr_Z2ErKUaow5mU7jTpEXVhxaL_M=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/wj/.ohos/config/default_Cashbook-ohos_VEVwBObAZDzyyRZGr_Z2ErKUaow5mU7jTpEXVhxaL_M=.p12",
+          "storePassword": "0000001B0A5EEC3D34AB5B8FC8966CCA8AC870B9C9B0FB0391868D668584C9B1BB34AC760DD69C48D509B3"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",
         "signingConfig": "default",
-        "targetSdkVersion": "6.0.0(20)",
-        "compatibleSdkVersion": "6.0.0(20)",
+        "targetSdkVersion": "6.0.1(21)",
+        "compatibleSdkVersion": "6.0.1(21)",
         "runtimeOS": "HarmonyOS",
         "buildOption": {
           "strictMode": {
@@ -65,6 +79,30 @@
     {
       "name": "design",
       "srcPath": "./core/design",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "data",
+      "srcPath": "./core/data",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dataPref",
+      "srcPath": "./core/dataPref",
       "targets": [
         {
           "name": "default",

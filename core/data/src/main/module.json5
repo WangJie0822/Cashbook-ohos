@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "data",
+    "type": "shared",
+    "description": "$string:shared_desc",
+    "deviceTypes": [
+      "phone"
+    ],
+    "deliveryWithInstall": true,
+  }
+}

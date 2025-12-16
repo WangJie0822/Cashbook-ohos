@@ -1,17 +1,32 @@
+import { SettingsRepository } from 'data';
 import { BaseState, BaseViewModel, PageContext, StorageKey } from 'design';
+import { Logger } from 'logger';
+
+const TAG = "SplashViewModel"
 
 export class SplashViewModel extends BaseViewModel<BaseState> {
-  private pageContext: PageContext = AppStorage.get(StorageKey.MAIN_PAGE_CONTEXT) as PageContext;
+  private pageContext: PageContext
+  private settingsRepository: SettingsRepository
 
-  constructor() {
+  constructor(pageContext: PageContext, settingsRepository: SettingsRepository) {
     super(new BaseState())
+    this.pageContext = pageContext
+    this.settingsRepository = settingsRepository
   }
 
   public sendEvent(event: SplashEvent): void {
     if (event == SplashEvent.JUMP_TO_MAIN) {
-      this.pageContext.replacePage({
-        routerName: 'MainPage'
-      })
+      if (this.settingsRepository.isPrivacyAgreementAccepted()) {
+        Logger.i(TAG, "jumpToMainPage")
+        this.pageContext.replacePage({
+          routerName: 'MainPage'
+        })
+      } else {
+        Logger.i(TAG, "jumpToPrivacyAgreementPage")
+        this.pageContext.replacePage({
+          routerName: 'PrivacyAgreementPage'
+        })
+      }
     }
   }
 }

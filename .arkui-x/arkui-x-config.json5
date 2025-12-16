@@ -2,6 +2,8 @@
   "crossplatform": true,
   "modules": [
     "phone",
-    "design"
+    "design",
+    "data",
+    "dataPref"
   ]
 }

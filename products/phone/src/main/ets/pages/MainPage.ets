@@ -26,7 +26,7 @@ struct MainPage {
 
   build() {
     NavDestination() {
-      Text("HAHAHAHHA")
+      Text("主界面")
     }
     .hideTitleBar(true)
     .onBackPressed(() => {
